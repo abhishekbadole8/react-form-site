@@ -16,9 +16,9 @@ function Form() {
     }
 
     const handleSelect = (e) => {
-        const { name, value } = e.target;
+        
         setSelect((prev) => {
-            return [...prev, value]
+            return [...prev, e.target.value]
         })
     }
 
