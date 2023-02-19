@@ -4,19 +4,21 @@ function Form() {
     const data = { name: "", email: "", password: "" }
 
     const [inputData, setInputData] = useState(data)
-    const [select, setSelect] = useState(["HTML","Css","Js"])
+    const [select, setSelect] = useState(["HTML", "Css", "Js"])
     const [isButtonEnable, setButtonEnable] = useState(true);
-    // const [selectPlaceHolder, setSelectPlaceHolder] = useState("Choose Skills")
+    // const [subscribe, setSubscribe] = useState()
 
     function handelData(e) {
         setInputData({ ...inputData, [e.target.name]: e.target.value })
-        if (inputData.name && inputData.email && inputData.password && (select.length>0)) {
+        if (inputData.name && inputData.email && inputData.password && (select.length > 0)) {
             setButtonEnable(false)
         }
     }
 
     const handleSelect = (e) => {
-        
+        if (select.includes(e.target.value)) {
+            return
+        }
         setSelect((prev) => {
             return [...prev, e.target.value]
         })
@@ -51,19 +53,14 @@ function Form() {
                 </div>
 
                 <div className="courseTag">
-                    {/* <Courses skillsMany={props.skills}/> */}
-                   
+
                     {select.map((data) => {
                         return <p>{data}</p>
                     })}
-                    
-                    {/* {select.map((data) => {
-                        return <p>{data}</p>
-                    })} */}
 
                 </div>
 
-                <button style={{ backgroundColor: isButtonEnable ? "none" : "green" }} onClick="" type="submit" id="btn" >CLAIM YOUR FREE TRIAL</button>
+                <button style={{ backgroundColor: isButtonEnable ? "none" : "green" }} onClick="{handelSubscribe}" type="submit" id="btn" >CLAIM YOUR FREE TRIAL</button>
 
                 <p className="tac">By clicking the button you are agreeing to our Terms and Services</p>
             </form>

@@ -13,7 +13,10 @@ function Page() {
 
             <div className="formBox">
 
-                <div className="block">Try it free 7 days then ₹180/mo. thereafter</div>
+                <div className="block">
+                    <p>Try it free 7 days then ₹180/mo. thereafter</p>
+                </div>
+                
                 <Form />
 
             </div>

@@ -4,8 +4,12 @@
 }
 
 body {
+  width: 100vw;
+  height: 100vh;
   background-color: #78AEFF;
   font-family: 'Roboto', sans-serif;
+  display: flex;justify-content: center;
+  align-items: center;
 }
 
 .mainDiv {
@@ -13,7 +17,6 @@ body {
   justify-content: center;
   align-items: center;
   gap: 40px;
-
 }
 
 /* Left Container Start Here */
