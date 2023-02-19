@@ -1,14 +1,12 @@
 import React from "react";
 import Page from "./Page";
-
+import "../styles.css"
 
 function App() {
-
-
-
   return (
-
-    <Page />
+    <div className="bodyMain">
+      <Page />
+    </div>
   );
 }
 

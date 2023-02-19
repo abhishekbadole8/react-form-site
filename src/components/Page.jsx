@@ -1,6 +1,6 @@
 import React from "react";
 import Form from "./Form";
-import "../index.css"
+
 
 function Page() {
     return (
@@ -12,9 +12,10 @@ function Page() {
             </div>
 
             <div className="formBox">
-                <div className="block">Try it free 7 days then ₹180/mo. thereafter</div>
 
+                <div className="block">Try it free 7 days then ₹180/mo. thereafter</div>
                 <Form />
+
             </div>
         </div>
     )
